@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">ProyectoIMC</string>
+
+    <string name="tvwTitulo">Calculadora del IMC</string>
+
+
+
+
+    <string name="tvwNombre">Nombre: </string>
+    <string name="etNombre">Ingresa tu nombre</string>
+    <string name="tvwEdad">Edad: </string>
+    <string name="etEdad">Ingresa tu edad</string>
+
+    <string name="tvwPeso">Peso: </string>
+    <string name="etPeso">Ingresa tu peso en kg</string>
+
+    <string name="tvwEstatura">Estatura: </string>
+    <string name="etEstatura">Ingresa tu estatura en cm</string>
+
+
+    <string name="bttCalcular">Calcular IMC</string>
+
+    <string name="bttGuardar">Guardar</string>
+    <string name="BttResultados">Resultados guardados</string>
+
 </resources>

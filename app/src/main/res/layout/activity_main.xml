@@ -7,13 +7,160 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <EditText
+        android:id="@+id/etPeso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="@string/etPeso"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etEstatura"
+        app:layout_constraintTop_toBottomOf="@+id/etEstatura" />
+
+    <TextView
+        android:id="@+id/tvwNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/tvwNombre"
+        app:layout_constraintEnd_toEndOf="@+id/tvwEstatura"
+        app:layout_constraintStart_toStartOf="@+id/tvwEdad"
+        app:layout_constraintTop_toTopOf="@+id/etNombre" />
+
+    <TextView
+        android:id="@+id/tvwEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvwEdad"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etEdad"
+        app:layout_constraintEnd_toEndOf="@+id/tvwPeso"
+        app:layout_constraintStart_toStartOf="@+id/tvwPeso" />
+
+    <EditText
+        android:id="@+id/etEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:hint="@string/etEdad"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etNombre"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+    <TextView
+        android:id="@+id/tvwEstatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="@string/tvwEstatura"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etEstatura"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEstatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/etEstatura"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/etEdad"
+        app:layout_constraintTop_toBottomOf="@+id/etEdad" />
+
+    <TextView
+        android:id="@+id/tvwPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="52dp"
+        android:text="@string/tvwPeso"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etPeso"
+        app:layout_constraintEnd_toStartOf="@+id/bttCalcular"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bttCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="@string/bttCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPeso" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="@string/etNombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwTitulo" />
+
+    <TextView
+        android:id="@+id/tvwIMcResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="25dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/tvwImc"
+        app:layout_constraintTop_toBottomOf="@+id/tvwImc" />
+
+    <TextView
+        android:id="@+id/tvwTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/tvwTitulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/bttResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:text="@string/BttResultados"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bttGuardar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bttGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="47dp"
+        android:text="@string/bttGuardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bttResultados" />
+
+    <TextView
+        android:id="@+id/tvwImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="49dp"
+        android:text="Tu IMC es:"
+        app:layout_constraintStart_toStartOf="@+id/bttCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/bttCalcular" />
+
+    <TextView
+        android:id="@+id/tvwResultadoDescrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="59dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tvwImc"
+        app:layout_constraintTop_toBottomOf="@+id/tvwImc" />
 </androidx.constraintlayout.widget.ConstraintLayout>
